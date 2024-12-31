@@ -1,0 +1,84 @@
+.thumb {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titles {
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    list-style-type: none;
+    gap: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .collection-container {
+    display: grid;
+    grid-template: 40px 1fr / 1fr;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.thumb-title {
+    display: grid;
+    grid-template: 25px 1fr / 1fr;
+} */
+
+/* Center the container of the text and image */
+.collection-container {
+    text-align: center; /* Centers the text and the image horizontally */
+    margin: 20px auto;  /* Adds space between each cocktail and centers the container */
+    width: 200px;       /* Limits the width of the container */
+}
+
+/* Style the image to make it smaller */
+.collection-container img {
+    max-width: 100%;   /* Ensures the image will not overflow the container */
+    height: auto;      /* Maintains aspect ratio */
+    display: block;    /* Ensures the image is centered */
+    margin: 0 auto;    /* Centers the image horizontally */
+}
+
+/* Optionally style the text (li) */
+.thumb-title {
+    font-size: 18px;
+    margin: 10px 0;    /* Adds spacing around the title */
+}
+
+.solo-container {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+.picture {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.description > p {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.solo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

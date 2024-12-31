@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cocktail Recepts</title>
+</head>
+<body>
+  <h1>Random cocktail</h1>
+  <form action="/searchN" method="POST">
+    <input type="text" name="cocktailName" placeholder="Name">
+    <input type="submit" value="search">
+  </form>
+  <form action="/random" method="POST">
+    <input type="submit" value="random">
+  </form>
+    <div class="solo-container">
+      <% apiData.forEach(function(item) { %>
+        <div class="picture">
+          <h2 class="solo"><%= item.strDrink %></h2>
+          <img class="solo" src="<%= item.strDrinkThumb %>" />
+        </div>
+        <div class="description">
+          <p>Description</p>
+          <p><%= item.strInstructions %></p>
+        </div>
+          <p>Ingredients</p>
+        <ul>
+          <% Object.keys(item).forEach(function(key) { %>
+            <% if (key.startsWith("strIngredient") && item[key]) { %>
+              <li><%= item[key] %></li>
+            <% } %>
+          <% }) %>
+        </ul>
+      <% }) %>
+    </div>
+</body>
+</html>
