@@ -25,6 +25,7 @@
           <p>Description</p>
           <p><%= item.strInstructions %></p>
         </div>
+        <div class="ingredients">
           <p>Ingredients</p>
         <ul>
           <% Object.keys(item).forEach(function(key) { %>
@@ -32,6 +33,7 @@
               <li><%= item[key] %></li>
             <% } %>
           <% }) %>
+          </div>
         </ul>
       <% }) %>
     </div>

@@ -39,15 +39,36 @@ app.post("/random", async (req, res) => {
     }
 })
 
+// app.post("/cocktail", async (req, res) => {
+//     try {
+//         const cocktailName = req.body.cocktailName;
+
+//         console.log("Cocktail selected:", cocktailName);
+//         const result = await axios.get(API_URL + "margarita");
+//         const drinks = result.data.drinks;
+//         res.render("cocktail.ejs", { apiData: drinks });
+//     } catch (error) {
+//         console.error(error.message);
+//     }
+// })
+
+// TODO make it so whatever you pass through will only
+// display one pitcture
 app.post("/cocktail", async (req, res) => {
     try {
-        const result = await axios.get(API_URL + "margarita");
+        // Get the cocktail name from the form submission
+        const idDrink = req.body.idDrink;
+
+        // Make an API request using the cocktail name
+        const result = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + idDrink);
         const drinks = result.data.drinks;
+
+        // Render the response
         res.render("cocktail.ejs", { apiData: drinks });
     } catch (error) {
         console.error(error.message);
     }
-})
+});
 
 app.listen(3000, () =>
     console.log("Listening on port 3000"),

@@ -21,7 +21,10 @@
     <% apiData.forEach(function(item) { %>
       <div class="collection-container">
       <li class="thumb-title"><%= item.strDrink %></li>
-      <img src="<%= item.strDrinkThumb %>" />
+  <form action="/cocktail" method="POST">
+      <input type="hidden" name="idDrink" value="<%= item.idDrink %>" />
+      <input type="image" src="<%= item.strDrinkThumb %>" alt="submit" />
+  </form>
       </div>
     <% }) %>
   </ul>
