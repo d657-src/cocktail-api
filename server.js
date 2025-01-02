@@ -9,16 +9,16 @@ app.use(express.static("public"))
 
 const API_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
+// Redirects to the main page
 app.get("/", async (req, res) => {
     try {
-        const result = await axios.get(API_URL + "margarita");
-        const drinks = result.data.drinks;
-        res.render("index.ejs", { apiData: drinks });
+        res.render("main.ejs");
     } catch (error) {
         console.error(error.message);
     }
 })
 
+// Redirects to the page of a clicked image
 app.post("/searchN", async (req, res) => {
     try {
         const result = await axios.get(API_URL + req.body.cocktailName);
@@ -29,6 +29,7 @@ app.post("/searchN", async (req, res) => {
     }
 })
 
+// Redirects to the page with the random imgage
 app.post("/random", async (req, res) => {
     try {
         const result = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php");

@@ -1,3 +1,7 @@
+html {
+    font-family: "Playfair";
+}
+
 .thumb {
     height: 200px;
     display: flex;
@@ -18,90 +22,58 @@
     align-items: center;
 }
 
-/* .collection-container {
+#main-image {
     display: grid;
-    grid-template: 40px 1fr / 1fr;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
+}
+
+.collection-container {
+    text-align: center; 
+    margin: 20px auto;  
+    width: 200px;       
+}
+
+.collection-container input {
+    max-width: 100%;   
+    height: auto;      
+    display: block;   
+    margin: 0 auto;    
+}
+
+.thumb-title {
+    font-size: 18px;
+    margin: 10px 0;    
+}
+
+.solo-container {
+    display: grid;
+    grid-template: 70px 1fr / repeat(2, 1fr); 
+}
+
+.picture {
+    display: grid;
+    text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredients p {
+    margin: 5px 0; 
+}
+
+p {
     font-size: 24px;
 }
 
-.thumb-title {
-    display: grid;
-    grid-template: 25px 1fr / 1fr;
-} */
-
-/* Center the container of the text and image */
-.collection-container {
-    text-align: center; /* Centers the text and the image horizontally */
-    margin: 20px auto;  /* Adds space between each cocktail and centers the container */
-    width: 200px;       /* Limits the width of the container */
-}
-
-/* Style the image to make it smaller */
-.collection-container input {
-    max-width: 100%;   /* Ensures the image will not overflow the container */
-    height: auto;      /* Maintains aspect ratio */
-    display: block;    /* Ensures the image is centered */
-    margin: 0 auto;    /* Centers the image horizontally */
-}
-
-/* Optionally style the text (li) */
-.thumb-title {
-    font-size: 18px;
-    margin: 10px 0;    /* Adds spacing around the title */
-}
-
-/* .solo-container {
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
-}
-
-.picture {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-}
-
-.description > p {
-    margin: 0;
+li {
+    font-size: 24px;
 }
 
 h2 {
-    text-align: center;
-}
-
-.solo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-} */
-
-.solo-container {
-    display: flex; 
-    gap: 20px; 
-    margin-bottom: 30px; 
-}
-
-.picture {
-    width: 300px; 
-}
-
-.ingredients {
-    display: block;
-}
-
-h2.solo {
-    margin-bottom: 10px; 
-    text-align: center; 
-}
-
-.description p {
-    margin: 5px 0; 
+    font-size: 30px;
+    margin-bottom: 10px;
 }
